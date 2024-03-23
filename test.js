@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', (event) => {
             if (link.getAttribute('href').startsWith('#')) {
                 event.preventDefault();
-                const targetSectionId = link.getAttribute('href').substring(1); // Elimina el #
+                const targetSectionId = link.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetSectionId);
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -78,7 +78,7 @@ function displayEpisodios(episodios) {
             episodeElement.innerHTML = `
                 <h3>${episode.name}</h3>
                 <p>${description}</p>
-                <a href="${episode.spotifyLink}" target="_blank">Escuchar en Spotify</a>
+                <a href="${episode.spotifyLink}"target="_blank">Escuchar en Spotify</a>
             `;
             episodesList.appendChild(episodeElement);
         });

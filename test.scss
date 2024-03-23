@@ -60,19 +60,35 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 }
 
 #about {
-    background-color: #FFFFFF; // Establece el fondo a blanco
+    background-color: #FFFFFF;
 }
 
-// Otros estilos...
+.container, .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-section {
+    padding: 0;
+}
+
+.contact-form {
+    background-color: $body-bg;
+    margin: 0 auto;
+    max-width: 100%; 
+    box-shadow: none; 
+}
 
 
 .navbar-nav .nav-link .nav-img {
-  transition: transform 0.3s ease-in-out; /* Transición suave para el efecto de agrandamiento */
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover .nav-img, 
 .navbar-nav .nav-link:focus .nav-img {
-  transform: scale(1.3); /* Agrandamiento leve al pasar el cursor */
+  transform: scale(1.3);
 }
 
 
@@ -99,6 +115,50 @@ html, body {
     background-attachment: fixed;
     background-position: center;
     height: 100%;
+  }
+}
+
+
+#episodes-list {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.episode {
+  display: flex;
+  margin-bottom: 1rem; // Espacio entre episodios
+  flex-wrap: wrap;
+
+  .episode-thumbnail {
+    margin-right: 1rem; // Espacio entre la imagen y el texto
+    width: 100px; // Ancho del ícono de la imagen
+    height: 100px; // Altura del ícono de la imagen
+    overflow: hidden; // Evita que la imagen desborde su contenedor
+    img {
+      width: 100%;
+      height: auto; // Mantiene la proporción original
+      object-fit: cover; // Asegura que la imagen cubra todo el espacio disponible
+    }
+  }
+
+  h3 {
+    padding: 0;
+    font-size: 1.5rem; // Tamaño del título del episodio
+  }
+
+  p {
+    margin: 0.5rem 0; // Espacio antes y después de la descripción
+  }
+
+  a {
+    font-size: 0.9rem; // Tamaño más pequeño para los enlaces
+    text-decoration: none; // Elimina el subrayado de los enlaces
+    color: $primary; // Color del enlace
+
+    &:hover {
+      text-decoration: underline; // Añade un subrayado en hover para mejor accesibilidad
+    }
   }
 }
 
@@ -161,7 +221,6 @@ html, body {
 }
 
 
-/* O también puedes establecer un tamaño específico en píxeles */
 .navbar-nav img {
   width: 75px; /* Ajusta el ancho de las imágenes */
   height: auto; /* Mantiene la proporción original */
@@ -174,6 +233,17 @@ html, body {
   */
 }
 
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-form {
+  padding: 0;
+}
+
 .container-fluid {
   background-position: center;
   background-color: #ffffff;
@@ -183,7 +253,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+  height: 100vh;
 }
 
 .navbar {
@@ -194,11 +264,11 @@ html, body {
 }
 
 .navbar-toggler {
-  display: none; // Oculto por defecto
+  display: none;
   border: none;
-  background-color: transparent; // Fondo transparente
-  @media (max-width: $breakpoint-lg) { // Usa tu variable de punto de quiebre
-    display: block; // Mostrar en pantallas pequeñas
+  background-color: transparent; 
+  @media (max-width: $breakpoint-lg) { 
+    display: block;
   }
 }
 
@@ -358,6 +428,55 @@ margin-bottom: 20px; /* Espacio entre el título y los enlaces */
   &:focus {
     border-color: lighten($input-focus-border-color, 10%); // Un borde más claro al enfocar
     box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5); // Sombra suave
+  }
+}
+
+
+/**********************Pagina de episodios*********************************/
+
+#episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // Espacio entre episodios
+}
+
+.episode {
+  display: flex;
+  gap: 1rem; 
+
+  .episode-thumbnail {
+    flex-shrink: 0; // Evita que la imagen se encoja
+    width: 100px; // Ancho de la imagen
+    height: 100px; // Altura de la imagen
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .episode-content {
+    flex-grow: 1;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: $primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
