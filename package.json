@@ -1,0 +1,12 @@
+{
+  "name": "bootstrap-paggolpe",
+  "version": "1.0.0",
+  "description": "podcast",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/test.scss css/test.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

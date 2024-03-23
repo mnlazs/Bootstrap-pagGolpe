@@ -1,0 +1,364 @@
+// Definición de variables
+$black: #000000;
+$body-color: #ffffff;
+$body-bg: #f0f0f0;
+$border-color: #cccccc; 
+$border-width: 1px;
+$border-radius: 4px;
+$btn-transition: all 0.3s ease;
+$component-active-bg: #007BFF;
+$primary: #007bff; 
+$input-focus-border-color: #ffffff;
+$btn-focus-box-shadow: 0 0 8px rgba(#02ec06, 0.5);
+$accordion-padding-y: 1rem;
+$accordion-padding-x: 1.25rem;
+$accordion-color: $body-color;
+$accordion-bg: $body-bg;
+$accordion-border-width: $border-width;
+$accordion-border-color: rgba($black, .125);
+$accordion-border-radius: $border-radius;
+$accordion-inner-border-radius: subtract($border-radius, $border-width);
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: $accordion-padding-x;
+$accordion-button-padding-y: $accordion-padding-y;
+$accordion-button-padding-x: $accordion-padding-x;
+$accordion-button-color: $accordion-color;
+$accordion-button-bg: $accordion-bg;
+$accordion-transition: $btn-transition, border-radius .15s ease;
+$accordion-button-active-bg: tint-color($component-active-bg, 90%);
+$accordion-button-active-color: shade-color($primary, 10%);
+$accordion-button-focus-border-color: $input-focus-border-color;
+$accordion-button-focus-box-shadow: $btn-focus-box-shadow;
+$accordion-icon-width: 1.25rem;
+$accordion-icon-color: $accordion-color;
+$accordion-icon-active-color: $accordion-button-active-color;
+$accordion-icon-transition: transform .2s ease-in-out;
+$accordion-icon-transform: rotate(-180deg);
+$breakpoint-lg: 992px; // Define el punto de quiebre para pantallas grandes
+
+// Imágenes SVG codificadas en base64 para íconos
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+// Media queries para diferentes tamaños de pantalla
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1201px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+#about {
+    background-color: #FFFFFF; // Establece el fondo a blanco
+}
+
+// Otros estilos...
+
+
+.navbar-nav .nav-link .nav-img {
+  transition: transform 0.3s ease-in-out; /* Transición suave para el efecto de agrandamiento */
+}
+
+.navbar-nav .nav-link:hover .nav-img, 
+.navbar-nav .nav-link:focus .nav-img {
+  transform: scale(1.3); /* Agrandamiento leve al pasar el cursor */
+}
+
+
+.selector {
+  padding: $accordion-padding-y $accordion-padding-x;
+  color: $accordion-color;
+  background-color: $accordion-bg;
+  padding: 1rem 1.25rem;
+  color: #ffffff;
+  background-color: #f0f0f0;
+}
+
+/* Estilos generales para todas las pantallas */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Caprasimo', sans-serif;
+  background: $body-bg;
+  body {
+    background-image: url('tu-imagen-de-fondo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+  }
+}
+
+.section1 {
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section1, .section2 {
+  min-height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.section1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/collage3.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+
+.section1 .text {
+  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+}
+.section2 .text {
+  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+  font-size: 6vw;
+}
+.text{
+  top: -30%;
+  left: 50%;
+  position: absolute;
+  font-size: 10vw;
+  color: white;
+  text-shadow: 2px 2px 5px  rgba(0,0,0,0.3),
+  5px 5px 70px rgba(255,255,255,0.5);
+  transform: scale(1,1.1) translate(-50%);
+}
+
+.navbar {
+  padding: 5rem 9rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 364px;
+  padding-right: 446px;
+}
+
+
+/* O también puedes establecer un tamaño específico en píxeles */
+.navbar-nav img {
+  width: 75px; /* Ajusta el ancho de las imágenes */
+  height: auto; /* Mantiene la proporción original */
+}
+
+.nav-img {
+  width: 100px; /* Ajusta el ancho de las imágenes */
+  height: auto; /* Mantiene la proporción original
+  
+  */
+}
+
+.container-fluid {
+  background-position: center;
+  background-color: #ffffff;
+
+}
+.center-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+}
+
+.navbar {
+  padding: 5rem 9rem;
+  display: flex;
+  padding-left: 446px;
+  padding-right: 446px;
+}
+
+.navbar-toggler {
+  display: none; // Oculto por defecto
+  border: none;
+  background-color: transparent; // Fondo transparente
+  @media (max-width: $breakpoint-lg) { // Usa tu variable de punto de quiebre
+    display: block; // Mostrar en pantallas pequeñas
+  }
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {  /*Esta línea de código CSS define un fondo personalizado para el icono del botón desplegable de navegación (navbar-toggler) en la barra de navegación (navbar).*/ 
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+
+/*=============== Siguiente section ====================*/
+
+.lower.container-fluid {
+  background-image: url('images/Una-mujer-armenia.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el contenedor */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+
+/******BOTONES**********/
+
+.rectangular-button.bg-transparent {
+  padding: 10px 20px;
+  color: #727171;
+  border: 2px solid #636262;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px;
+  margin-top: 78px;
+  background-color: transparent; /* Mantenemos el fondo transparente */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+  &:hover {
+    background-color: $accordion-button-active-bg; // Usa una variable para el color de fondo al pasar el mouse
+    color: $accordion-button-active-color; // Cambia el color del texto al pasar el mouse
+    border-color: lighten($border-color, 10%);
+  }
+}
+
+.rectangular-button.bg-transparent:hover {
+  background-color: f74848(86, 255, 70);
+  border-color: #f70000(68, 255, 40, 0.5); 
+  color: #f74848; 
+}
+
+/******STOCK criollo market**********/
+
+.cinta {
+  width: 100%;
+  overflow: hidden;
+  position: fixed; 
+  top: 0;
+  z-index: 1000;
+  background-color: #f79090; 
+}
+
+.cinta ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  animation: mover-cinta 50s linear infinite;
+}
+
+.cinta li {
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+@keyframes mover-cinta {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/****************** paralax efect **************************/
+
+
+.section1 {
+  position: relative;
+}
+
+.section1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
+  z-index: -1; /* Para que la imagen esté detrás del texto */
+  opacity: 0.2; /* Puedes ajustar la opacidad según tus preferencias */
+}
+
+
+/**************** Estilos para el footer***************/
+
+footer {
+  background-color: #f70000;; /* Cambia el color de fondo según tus preferencias */
+  color: white;
+  padding: 20px 0; /* Añade espacio alrededor del contenido del footer */
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.footer-center h3 {
+margin-bottom: 20px; /* Espacio entre el título y los enlaces */
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-center li {
+  margin-right: 20px;
+}
+/* Estilos para los enlaces */
+.footer-center a {
+  color: #ff0000;
+  text-decoration: none; /* Elimina el subrayado*/
+  font-size: 18px;
+  margin-top: 99px;
+}
+
+/* Estilos para el footer-bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(34, 34, 34, 0);
+  font-size: medium;
+}
+
+
+.form-control {
+  background-color: $body-bg; // Usa la variable para el fondo
+  border-color: $input-focus-border-color; // Color del borde basado en tus variables
+  color: $body-color; // Color del texto
+
+  &:focus {
+    border-color: lighten($input-focus-border-color, 10%); // Un borde más claro al enfocar
+    box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5); // Sombra suave
+  }
+}
+
+
