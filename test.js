@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+        // Inicialización del efecto de menú de hamburguesa
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarNav = document.querySelector('.navbar-nav');
+
+  navbarToggler.addEventListener('click', function() {
+    navbarNav.classList.toggle('active');
+  });
+
+
     initParallaxEffect();
     // Inicialización de otras funciones necesarias al cargar el documento
     logEpisodios();
-
-    // Inicialización del efecto de menú de hamburguesa
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarNav = document.querySelector('.navbar-nav');
-
-    navbarToggler.addEventListener('click', function() {
-        navbarNav.classList.toggle('active');
-    });
 
     // Manejo de clics en enlaces de navegación para un desplazamiento suave
     const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');

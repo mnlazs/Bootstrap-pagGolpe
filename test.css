@@ -78,6 +78,7 @@ html body, body body {
 
 .episode {
   display: flex;
+  align-items: center;
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
@@ -93,6 +94,7 @@ html body, body body {
   object-fit: cover;
 }
 .episode h3 {
+  margin: 0;
   padding: 0;
   font-size: 1.5rem;
 }
@@ -162,7 +164,7 @@ html body, body body {
   padding: 5rem 9rem;
   display: flex;
   flex-direction: column;
-  padding-left: 364px;
+  padding-left: 389px;
   padding-right: 446px;
 }
 
@@ -406,6 +408,32 @@ footer {
 }
 .episode .episode-content a:hover {
   text-decoration: underline;
+}
+
+/* Estilos para la imagen colapsada */
+.navbar-brand .collapsed-image {
+  display: none; /* Oculta la imagen colapsada por defecto */
+}
+
+.navbar-brand img {
+  display: block; /* Asegúrate de que la imagen esté visible en pantallas grandes */
+}
+
+/* Mostrar la imagen colapsada en pantallas pequeñas */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    display: none; /* Muestra la imagen colapsada */
+    max-width: 50px; /* Ajusta el ancho de la imagen según tus necesidades */
+  }
+  .navbar-collapse {
+    display: none; /* Oculta el menú desplegable por defecto */
+  }
+  .navbar-brand img.active {
+    display: none; /* Oculta la imagen colapsada cuando el menú está desplegado */
+  }
+  .navbar-collapse.active {
+    display: block; /* Muestra el menú desplegable cuando se hace clic en la imagen */
+  }
 }
 
 /*# sourceMappingURL=test.css.map */
