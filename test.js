@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    initParallaxEffect();
-    initParallaxEffect(); // Inicializa el efecto parallax
-
+    initParallaxEffect(); 
 });
 
 
@@ -108,12 +106,19 @@ const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
     }
 
 }
+
 function initParallaxEffect() {
+    const parallaxElement = document.querySelector('.section1 img');  // Asegúrate de que este selector coincida con tu elemento parallax
+    const section1 = document.querySelector('.section1');
+
     window.addEventListener('scroll', function() {
-        var parallaxElement = document.querySelector('.section1 img'); // Asegúrate de que este selector coincida con tu elemento parallax
-        if (parallaxElement) { // Verifica si el elemento existe para evitar errores
-            var scrollPosition = window.pageYOffset;
-            parallaxElement.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        const scrollPosition = window.pageYOffset;
+        const section1OffsetTop = section1.offsetTop;
+        const section1Height = section1.offsetHeight;
+
+        if (scrollPosition > section1OffsetTop && scrollPosition < section1OffsetTop + section1Height) {
+            const parallaxOffset = (scrollPosition - section1OffsetTop) * 0.5;
+            parallaxElement.style.transform = 'translateY(' + parallaxOffset + 'px)';
         }
     });
 }

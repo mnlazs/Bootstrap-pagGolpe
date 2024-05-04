@@ -1,4 +1,5 @@
-// Definición de variables
+// test.scss
+
 $black: #000000;
 $body-color: #ffffff;
 $body-bg: #f0f0f0;
@@ -34,7 +35,7 @@ $accordion-icon-color: $accordion-color;
 $accordion-icon-active-color: $accordion-button-active-color;
 $accordion-icon-transition: transform .2s ease-in-out;
 $accordion-icon-transform: rotate(-180deg);
-$breakpoint-lg: 992px; // Define el punto de quiebre para pantallas grandes
+$breakpoint-lg: 992px;
 
 // Imágenes SVG codificadas en base64 para íconos
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
@@ -110,7 +111,6 @@ html, body {
   font-family: 'Caprasimo', sans-serif;
   background: $body-bg;
   body {
-    background-image: url('tu-imagen-de-fondo.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -167,12 +167,18 @@ html, body {
 .section1 {
   position: relative;
   overflow: hidden;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 500px;
 }
 
+.section1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-height: 600px; /* Asegura que la imagen sea más alta que el contenedor */
+}
 .section1, .section2 {
   min-height: 100%;
   position: relative;
@@ -360,18 +366,20 @@ html, body {
 
 /****************** paralax efect **************************/
 
-
-.section1 {
-  position: relative;
+.parallax {
+  height: 1500px;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.section1 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Para que la imagen ocupe todo el ancho del contenedor */
-  z-index: -1; /* Para que la imagen esté detrás del texto */
-  opacity: 0.2; /* Puedes ajustar la opacidad según tus preferencias */
+.text-overlay {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;  
 }
 
 
