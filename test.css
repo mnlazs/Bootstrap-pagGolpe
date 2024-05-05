@@ -138,25 +138,30 @@ html, body {
   transform: scale(1, 1.1) translate(-50%); }
 
 .navbar {
-  padding: 5rem 9rem;
-  display: flex;
-  flex-direction: column;
-  padding-left: 389px;
-  padding-right: 446px; }
+  padding: 2rem 4rem;
+  /* Ejemplo de valores flexibles */ }
+  @media (max-width: 992px) {
+    .navbar {
+      padding: 1rem 2rem;
+      /* Cambia el padding para pantallas más pequeñas */ } }
 
 .navbar-nav img {
-  width: 75px;
-  /* Ajusta el ancho de las imágenes */
-  height: auto;
-  /* Mantiene la proporción original */ }
+  width: 50px;
+  /* Ejemplo de tamaño para pantallas pequeñas */
+  height: auto; }
+  @media (min-width: 992px) {
+    .navbar-nav img {
+      width: 75px;
+      /* Tamaño para pantallas más grandes */ } }
 
 .nav-img {
-  width: 100px;
-  /* Ajusta el ancho de las imágenes */
-  height: auto;
-              /* Mantiene la proporción original
-
-*/ }
+  width: 50px;
+  /* Tamaño para pantallas pequeñas */
+  height: auto; }
+  @media (min-width: 992px) {
+    .nav-img {
+      width: 100px;
+      /* Tamaño para pantallas más grandes */ } }
 
 .container {
   padding-right: 0;
@@ -184,12 +189,12 @@ html, body {
   padding-right: 446px; }
 
 .navbar-toggler {
-  display: none;
-  border: none;
-  background-color: transparent; }
+  display: block;
+  /* Asegura que el Navbar Toggler se muestre en pantallas pequeñas */ }
   @media (max-width: 992px) {
     .navbar-toggler {
-      display: block; } }
+      display: none;
+      /* Oculta el Navbar Toggler en pantallas más grandes */ } }
 
 .navbar .navbar-toggler {
   border: none; }
@@ -206,10 +211,15 @@ html, body {
   /* Evita que la imagen se repita */
   background-position: center;
   /* Centra la imagen en el contenedor */
-  padding: 0;
+  padding: 4rem 2rem;
+  /* Padding para pantallas pequeñas */
   margin: 0;
   width: 100%;
   height: 100vh; }
+  @media (min-width: 992px) {
+    .lower.container-fluid {
+      padding: 8rem 4rem;
+      /* Padding para pantallas más grandes */ } }
 
 /******BOTONES**********/
 .rectangular-button.bg-transparent {
