@@ -347,7 +347,7 @@ navbar-nav {
     &:hover {
       background-color: $accordion-button-active-bg;
       color: $accordion-button-active-color;
-      border-color: lighten($border-color, 10%);
+      transform: scale(1.05);
     }
   }
 }
@@ -355,8 +355,8 @@ navbar-nav {
 
 .rectangular-button.bg-transparent {
   padding: 10px 20px;
-  color: #727171;
-  border: 2px solid #636262;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
@@ -365,18 +365,20 @@ navbar-nav {
   margin: 10px;
   margin-top: 78px;
   background-color: transparent; /* Mantenemos el fondo transparente */
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; /* Agregar transform a la transición */
+
   &:hover {
     background-color: $accordion-button-active-bg; // Usa una variable para el color de fondo al pasar el mouse
     color: $accordion-button-active-color; // Cambia el color del texto al pasar el mouse
-    border-color: lighten($border-color, 10%);
+    border-color: lighten($border-color, 100px);
+    transform: scale(1.05); // Aumenta el tamaño del botón en un 5%
   }
 }
 
+
 .rectangular-button.bg-transparent:hover {
-  background-color: f74848(86, 255, 70);
-  border-color: #f70000(68, 255, 40, 0.5); 
-  color: #f74848; 
+  background-color: #f74848(86, 255, 70);
+  color: #ec0082; 
 }
 
 /******STOCK criollo market**********/
