@@ -40,13 +40,12 @@
   color: #ffffff;
   background-color: #f0f0f0; }
 
-/* Estilos generales para todas las pantallas */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Caprasimo', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   background: #f0f0f0; }
   html body, body body {
     background-size: cover;
@@ -97,8 +96,7 @@ html, body {
   right: 0;
   width: 100%;
   height: auto;
-  min-height: 600px;
-  /* Asegura que la imagen sea más alta que el contenedor */ }
+  min-height: 600px; }
 
 .section1, .section2 {
   min-height: 100%;
@@ -302,18 +300,14 @@ navbar-nav {
 /**************** Estilos para el footer***************/
 footer {
   background-color: #f70000;
-  /* Cambia el color de fondo según tus preferencias */
   color: white;
   padding: 20px 0;
-  /* Añade espacio alrededor del contenido del footer */
-  text-align: center;
-  /* Centra el contenido horizontalmente */ }
+  text-align: center; }
 
 .footer-center {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* Centra los elementos horizontalmente */ }
+  align-items: center; }
 
 .footer-center h3 {
   margin-bottom: 20px;

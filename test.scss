@@ -37,7 +37,6 @@ $accordion-icon-transition: transform .2s ease-in-out;
 $accordion-icon-transform: rotate(-180deg);
 $breakpoint-lg: 992px;
 $breakpoint-sm: 300px;
-// Imágenes SVG codificadas en base64 para íconos
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 
@@ -59,8 +58,6 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
         font-size: 16px;
     }
 }
-
-
 
 #about {
     background-color: #FFFFFF;
@@ -103,14 +100,14 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
   background-color: #f0f0f0;
 }
 
-/* Estilos generales para todas las pantallas */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Caprasimo', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   background: $body-bg;
+  
   body {
     background-size: cover;
     background-attachment: fixed;
@@ -178,7 +175,7 @@ html, body {
   right: 0;
   width: 100%;
   height: auto;
-  min-height: 600px; /* Asegura que la imagen sea más alta que el contenedor */
+  min-height: 600px;
 }
 .section1, .section2 {
   min-height: 100%;
@@ -324,12 +321,11 @@ navbar-nav {
 
 /******BOTONES**********/
 
-// Button container with flex wrap
 .button-container {
   display: flex;
   justify-content: center;
   align-items: start;
-  flex-wrap: wrap; // Esto permite que los elementos se envuelvan en múltiples líneas si no hay espacio suficiente
+  flex-wrap: wrap;
 
   .rectangular-button {
     padding: 10px 20px;
@@ -436,16 +432,16 @@ navbar-nav {
 /**************** Estilos para el footer***************/
 
 footer {
-  background-color: #f70000;; /* Cambia el color de fondo según tus preferencias */
+  background-color: #f70000;
   color: white;
-  padding: 20px 0; /* Añade espacio alrededor del contenido del footer */
-  text-align: center; /* Centra el contenido horizontalmente */
+  padding: 20px 0;
+  text-align: center;
 }
 
 .footer-center {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos horizontalmente */
+  align-items: center;
 }
 
 .footer-center h3 {
