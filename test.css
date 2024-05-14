@@ -41,17 +41,17 @@
   background-color: #f0f0f0; }
 
 html, body {
+  font-family: "Bebas Neue", sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Noto Sans JP", sans-serif;
   background: #f0f0f0; }
-  html body, body body {
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100%; }
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
 
 #episodes-list {
   display: flex;
@@ -137,8 +137,7 @@ html, body {
 .navbar {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 2rem 13rem; }
+  width: 100%; }
   @media (max-width: 992px) {
     .navbar {
       flex-direction: column; } }
@@ -151,15 +150,12 @@ navbar-nav {
     padding: 0.5rem 1rem; }
 
 .navbar-nav img {
-  width: 68px;
+  width: 10px;
   height: auto;
   margin-top: 40px; }
   @media (min-width: 992px) {
     .navbar-nav img {
       width: 75px; } }
-
-.bg-dark {
-  background-color: #ffffff !important; }
 
 .navbar-nav img {
   width: 68px;
