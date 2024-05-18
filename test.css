@@ -442,4 +442,63 @@ footer {
   background-color: transparent;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; }
 
+/* boton para suscribirse en la pantalla principal */
+/* Estilos para el botón de suscribirte en la página principal */
+.text-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  /* Asegúrate de que el texto sea visible sobre el fondo */
+  text-align: center;
+  font-size: 20px; }
+
+.text-overlay {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 10px 0; }
+
+.subscribe-link {
+  position: relative;
+  /* Posicionamiento relativo para el enlace */
+  display: inline-block;
+  /* Hace que el enlace sea del tamaño de la imagen */ }
+
+.subscribe-text {
+  position: absolute;
+  /* Posiciona el texto de forma absoluta */
+  top: 14%;
+  /* Anteriormente 50%, ahora 45% para moverlo más arriba */
+  left: 50%;
+  /* Centra el texto horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Ajusta la posición exacta del centro */
+  color: white;
+  /* Color del texto */
+  font-size: 24px;
+  /* Tamaño del texto */
+  z-index: 10;
+  /* Asegura que el texto esté sobre la imagen */
+  pointer-events: none;
+  /* Evita que el texto bloquee el clic en la imagen */ }
+
+.subscribe-button {
+  max-width: 200px;
+  /* Establece un ancho máximo para la imagen */
+  width: 100%;
+  /* Asegura que la imagen se ajuste al contenedor */
+  border-radius: 5px;
+  /* Bordes redondeados para la imagen */
+  transition: all 0.3s ease;
+  /* Transición suave para todos los efectos */
+  display: block;
+  /* Asegura que la imagen llene el enlace */ }
+
+.subscribe-button:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  filter: brightness(120%); }
+
 /*# sourceMappingURL=test.css.map */
