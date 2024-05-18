@@ -9,7 +9,7 @@
   body {
     font-size: 16px; } }
 #about {
-  background-color: #FFFFFF; }
+  background-color: #ffffff; }
 
 .container, .container-fluid {
   padding-right: 0;
@@ -20,7 +20,7 @@
   padding: 0; }
 
 .contact-form {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   margin: 0 auto;
   max-width: 100%;
   box-shadow: none; }
@@ -35,10 +35,10 @@
 .selector {
   padding: 1rem 1.25rem;
   color: #ffffff;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 1rem 1.25rem;
   color: #ffffff;
-  background-color: #f0f0f0; }
+  background-color: #ffffff; }
 
 html, body {
   font-family: "Bebas Neue", sans-serif;
@@ -46,7 +46,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #f0f0f0; }
+  background: #ffffff; }
 
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
@@ -344,7 +344,7 @@ footer {
   margin-top: 1000px; }
 
 .form-control {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border-color: #ffffff;
   color: #ffffff; }
   .form-control:focus {
