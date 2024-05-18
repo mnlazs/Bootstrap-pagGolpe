@@ -443,7 +443,6 @@ footer {
   transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; }
 
 /* boton para suscribirse en la pantalla principal */
-/* Estilos para el botón de suscribirte en la página principal */
 .text-center {
   position: relative;
   top: 50%;
