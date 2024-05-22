@@ -14,7 +14,7 @@
 .container, .container-fluid {
   padding-right: 0;
   padding-left: 0;
-  height: 200px; }
+  height: 210px; }
 
 .contact-section {
   padding: 0; }
@@ -152,7 +152,7 @@ navbar-nav {
 .navbar-nav img {
   width: 10px;
   height: auto;
-  margin-top: 40px; }
+  margin-top: 107px; }
   @media (min-width: 301px) {
     .navbar-nav img {
       width: 75px; } }

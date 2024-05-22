@@ -63,10 +63,13 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
     background-color: #ffffff;
 }
 
+
+
+
 .container, .container-fluid {
     padding-right: 0;
     padding-left: 0;
-    height: 200px;
+    height: 210px;
 }
 
 .contact-section {
@@ -241,7 +244,7 @@ navbar-nav {
 .navbar-nav img {
   width: 10px;
   height: auto; 
-  margin-top: 40px;
+  margin-top: 107px;
   
   @media (min-width: $breakpoint-lg) { 
     width: 75px; 
@@ -409,6 +412,8 @@ navbar-nav {
     transform: translateX(-100%);
   }
 }
+
+
 
 /****************** paralax efect **************************/
 
