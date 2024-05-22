@@ -365,6 +365,16 @@ footer {
   font-size: 18px;
   margin-top: 600px; }
 
+.social-media {
+  justify-content: center;
+  /* Centra los íconos horizontalmente */
+  align-items: center;
+  /* Centra los íconos verticalmente */
+  margin-top: 20px;
+  /* Ajusta este valor según la distancia deseada */
+  gap: 10px;
+  /* Espacio entre cada ícono, ajusta según necesites */ }
+
 /**********************Pagina de episodios*********************************/
 #episodes-list {
   display: flex;
