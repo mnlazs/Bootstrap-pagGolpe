@@ -1,18 +1,17 @@
-// test.scss
-
+// Variables
 $black: #000000;
 $body-color: #ffffff;
 $body-bg: #ffffff;
-$border-color: #cccccc; 
+$border-color: #cccccc;
 $border-width: 1px;
 $border-radius: 4px;
 $btn-transition: all 0.3s ease;
 $component-active-bg: #007BFF;
-$primary: #007bff; 
+$primary: #007bff;
 $input-focus-border-color: #ffffff;
 $btn-focus-box-shadow: 0 0 8px rgba(#02ec06, 0.5);
 $accordion-padding-y: 1rem;
-$accordion-padding-x: 1.25rem; 
+$accordion-padding-x: 1.25rem;
 $accordion-color: $body-color;
 $accordion-bg: $body-bg;
 $accordion-border-width: $border-width;
@@ -63,9 +62,6 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
     background-color: #ffffff;
 }
 
-
-
-
 .container, .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -79,527 +75,497 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 .contact-form {
     background-color: $body-bg;
     margin: 0 auto;
-    max-width: 100%; 
-    box-shadow: none; 
+    max-width: 100%;
+    box-shadow: none;
 }
 
-
 .navbar-nav .nav-link .nav-img {
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover .nav-img, 
 .navbar-nav .nav-link:focus .nav-img {
-  transform: scale(1.3);
+    transform: scale(1.3);
 }
 
-
 .selector {
-  padding: $accordion-padding-y $accordion-padding-x;
-  color: $accordion-color;
-  background-color: $accordion-bg;
-  padding: 1rem 1.25rem;
-  color: #ffffff;
-  background-color: #ffffff;
+    padding: $accordion-padding-y $accordion-padding-x;
+    color: $accordion-color;
+    background-color: $accordion-bg;
+    padding: 1rem 1.25rem;
+    color: #ffffff;
+    background-color: #ffffff;
 }
 
 html, body {
-  font-family: "Bebas Neue", sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background: $body-bg;
+    font-family: "Bebas Neue", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: $body-bg;
 }
 
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
 
 #episodes-list {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.episode {
-  display: flex;
-  align-items: center; // Alinea verticalmente la imagen con el texto
-  margin-bottom: 1rem; // Espacio entre episodios
-  flex-wrap: wrap;
-
-  .episode-thumbnail {
-    margin-right: 1rem; // Espacio entre la imagen y el texto
-    width: 100px; // Ancho del ícono de la imagen
-    height: 100px; // Altura del ícono de la imagen
-    overflow: hidden; // Evita que la imagen desborde su contenedor
-    img {
-      width: 100%;
-      height: auto; // Mantiene la proporción original
-      object-fit: cover; // Asegura que la imagen cubra todo el espacio disponible
-    }
-  }
-
-  h3 {
-    margin: 0; // Elimina el margen predeterminado de los títulos
-    padding: 0;
-    font-size: 1.5rem; // Tamaño del título del episodio
-  }
-
-  p {
-    margin: 0.5rem 0; // Espacio antes y después de la descripción
-  }
-
-  a {
-    font-size: 0.9rem; // Tamaño más pequeño para los enlaces
-    text-decoration: none; // Elimina el subrayado de los enlaces
-    color: $primary; // Color del enlace
-
-    &:hover {
-      text-decoration: underline; // Añade un subrayado en hover para mejor accesibilidad
-    }
-  }
-}
-
-.section1 {
-  position: relative;
-  overflow: hidden;
-  height: 500px;
-}
-
-.section1 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  min-height: 600px;
-}
-.section1, .section2 {
-  min-height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-}
-
-.section1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('images/collage3.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-
-.section1 .text {
-  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
-}
-.section2 .text {
-  transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
-  font-size: 6vw;
-}
-.text{
-  top: -30%;
-  left: 50%;
-  position: absolute;
-  font-size: 10vw;
-  color: white;
-  text-shadow: 2px 2px 5px  rgba(0,0,0,0.3),
-  5px 5px 70px rgba(255,255,255,0.5);
-  transform: scale(1,1.1) translate(-50%);
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  @media (max-width: $breakpoint-lg) { 
+    display: flex;
     flex-direction: column;
-    }
-}
-
-navbar-nav {
-  display: center ;
-  justify-content: center;
-  width: auto; 
-  
-
-  .nav-item {
-    padding: 0.5rem 1rem;
-  }
-}
-
-.navbar-nav img {
-  width: 10px;
-  height: auto; 
-  margin-top: 107px;
-  
-  @media (min-width: $breakpoint-lg) { 
-    width: 75px; 
-  }
-}
-
-
-.navbar-nav img {
-  width: 68px;
-  height: auto; 
-  margin-top: 40px;
-  @media (min-width: $breakpoint-sm) { 
-    width: 75px; 
-  }
-}
-
-
-.container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-
-.contact-form {
-  padding: 0;
-}
-
-.container-fluid {
-  background-position: center;
-  background-color: #ffffff;
-
-
-  
-}
-.center-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-
-.navbar-toggler {
-  margin: 1rem 0;
-}
-
-.navbar .navbar-toggler {
-  border: none;
-}
-
-.navbar .navbar-toggler .navbar-toggler-icon {  
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-
-/*=============== Siguiente section ====================*/
-
-.lower.container-fluid {
-  background-image: url('images/Una-mujer-armenia.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center;
-  padding: 4rem 2rem;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-
-  @media (min-width: $breakpoint-lg) { 
-    padding: 8rem 4rem; /* Padding para pantallas más grandes */
-  }
-}
-
-
-/******BOTONES**********/
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-wrap: wrap;
-  margin-right: 99px;
-
-  .rectangular-button {
-    padding: 10px 20px;
-    color: #727171;
-    border: 2px solid #636262;
-    border-radius: $border-radius;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 10px;
-    background-color: transparent;
-    transition: $btn-transition, border-color 0.3s, color 0.3s;
-
-    &:hover {
-      background-color: $accordion-button-active-bg;
-      color: $accordion-button-active-color;
-      transform: scale(1.05);
-    }
-  }
-}
-
-
-.rectangular-button.bg-transparent {
-  padding: 10px 20px;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 32px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 10px;
-  margin-top: 78px;
-  background-color: transparent; /* Mantenemos el fondo transparente */
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; /* Agregar transform a la transición */
-
-  &:hover {
-    background-color: $accordion-button-active-bg; // Usa una variable para el color de fondo al pasar el mouse
-    color: $accordion-button-active-color; // Cambia el color del texto al pasar el mouse
-    border-color: lighten($border-color, 100px);
-    transform: scale(1.05); // Aumenta el tamaño del botón en un 5%
-  }
-}
-
-
-.rectangular-button.bg-transparent:hover {
-  background-color: #f74848(86, 255, 70);
-  color: #ec0082; 
-}
-
-/******STOCK criollo market**********/
-
-.cinta {
-  width: 100%;
-  overflow: hidden;
-  position: fixed; 
-  top: 0;
-  z-index: 1000;
-  background-color: #f79090; 
-}
-
-.cinta ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  animation: mover-cinta 50s linear infinite;
-}
-
-.cinta li {
-  white-space: nowrap;
-  padding: 0 20px;
-}
-
-@keyframes mover-cinta {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
-
-/****************** paralax efect **************************/
-
-.parallax {
-  height: 1500px;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.text-overlay {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;  
-}
-
-
-/**************** Estilos para el footer***************/
-
-footer {
-  background-color: #f70000;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-center h3 {
-margin-bottom: 20px;
-}
-
-.footer-center ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.footer-center li {
-  margin-right: 20px;
-}
-/* Estilos para los enlaces */
-.footer-center a {
-  color: #ff0000;
-  text-decoration: none; /* Elimina el subrayado*/
-  font-size: 18px;
-  margin-top: 99px;
-}
-
-/* Estilos para el footer-bottom */
-.footer-bottom {
-  text-align: center;
-  padding: 10px 0;
-  background-color: rgba(253, 253, 253, 0);
-  font-size: medium;
-}
-
-// Estilos específicos para el footer de la página "Sobre mí"
-.footer-sobremi {
-  background-color: #f70000; // Cambia el color de fondo, por ejemplo
-  color: #ffffff; // Asegúrate de que el texto sigue siendo legible
-  padding: 30px 0; // Un padding más grande si es necesario
-  font-size: 18px; // Un tamaño de letra diferente si es deseado
-  margin-top: 1000px;
-}
-
-.form-control {
-  background-color: $body-bg; // Usa la variable para el fondo
-  border-color: $input-focus-border-color; // Color del borde basado en tus variables
-  color: $body-color; // Color del texto
-
-  &:focus {
-    border-color: lighten($input-focus-border-color, 10%); // Un borde más claro al enfocar
-    box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5); // Sombra suave
-  }
-}
-// Estilos específicos para el footer de la página "Sobre mí"
-.footer-sobremi {
-  background-color: #f70000;
-  color: #ffffff;
-  padding: 30px 0; 
-  font-size: 18px;
-  margin-top: 1000px;
-}
-
-.footer-contact {
-  background-color: #f70000; // Cambia el color de fondo, por ejemplo
-  color: #ffffff; // Asegúrate de que el texto sigue siendo legible
-  padding: 30px 0; // Un padding más grande si es necesario
-  font-size: 18px; // Un tamaño de letra diferente si es deseado
-  margin-top: 600px;
-}
-
-.social-media {
-  justify-content: center;  /* Centra los íconos horizontalmente */
-  align-items: center;      /* Centra los íconos verticalmente */
-  margin-top: 20px;         /* Ajusta este valor según la distancia deseada */
-  gap: 10px;                /* Espacio entre cada ícono, ajusta según necesites */
-}
-
-
-/**********************Pagina de episodios*********************************/
-
-#episodes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; // Espacio entre episodios
 }
 
 .episode {
-  display: flex;
-  gap: 1rem; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 
-  .episode-thumbnail {
-    flex-shrink: 0; // Evita que la imagen se encoja
-    width: 100px; // Ancho de la imagen
-    height: 100px; // Altura de la imagen
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+    .episode-thumbnail {
+        margin-right: 1rem;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
-  }
-  .episode-content {
-    flex-grow: 1;
 
     h3 {
-      margin: 0;
-      padding: 0;
-      font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
     }
 
     p {
-      margin: 0.5rem 0;
+        margin: 0.5rem 0;
     }
 
     a {
-      font-size: 0.9rem;
-      text-decoration: none;
-      color: $primary;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: $primary;
 
-      &:hover {
-        text-decoration: underline;
-      }
+        &:hover {
+            text-decoration: underline;
+        }
     }
+}
+
+.section1 {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.section1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+.section1, .section2 {
+    min-height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/collage3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.section1 .text {
+    transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+}
+
+.section2 .text {
+    transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 10%);
+    font-size: 6vw;
+}
+
+.text {
+    top: -30%;
+    left: 50%;
+    position: absolute;
+    font-size: 10vw;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5);
+    transform: scale(1, 1.1) translate(-50%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+    }
+}
+
+.navbar-nav {
+    display: center;
+    justify-content: center;
+    width: auto;
+
+    .nav-item {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.navbar-nav img {
+    width: 10px;
+    height: auto;
+    margin-top: 107px;
+
+    @media (min-width: $breakpoint-lg) {
+        width: 75px;
+    }
+}
+
+.navbar-nav img {
+    width: 68px;
+    height: auto;
+    margin-top: 40px;
+
+    @media (min-width: $breakpoint-sm) {
+        width: 75px;
+    }
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-form {
+    padding: 0;
+}
+
+.container-fluid {
+    background-position: center;
+    background-color: #ffffff;
+}
+
+.center-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.navbar-toggler {
+  @media (min-width: $breakpoint-lg) {
+    display: none;
   }
+}
+
+
+
+/* Section siguiente */
+.lower.container-fluid {
+    background-image: url('images/Una-mujer-armenia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4rem 2rem;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 8rem 4rem;
+    }
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-right: 99px;
+
+    .rectangular-button {
+        padding: 10px 20px;
+        color: #727171;
+        border: 2px solid #636262;
+        border-radius: $border-radius;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px;
+        background-color: transparent;
+        transition: $btn-transition, border-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: $accordion-button-active-bg;
+            color: $accordion-button-active-color;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.rectangular-button.bg-transparent {
+    padding: 10px 20px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 32px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 78px;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease;
+
+    &:hover {
+        background-color: $accordion-button-active-bg;
+        color: $accordion-button-active-color;
+        border-color: lighten($border-color, 100px);
+        transform: scale(1.05);
+    }
+}
+
+.rectangular-button.bg-transparent:hover {
+    background-color: #f74848(86, 255, 70);
+    color: #ec0082;
+}
+
+/* Stock criollo market */
+.cinta {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #f79090;
+}
+
+.cinta ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: mover-cinta 50s linear infinite;
+}
+
+.cinta li {
+    white-space: nowrap;
+    padding: 0 20px;
+}
+
+@keyframes mover-cinta {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Parallax effect */
+.parallax {
+    height: 1500px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.text-overlay {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f70000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-center h3 {
+    margin-bottom: 20px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-center li {
+    margin-right: 20px;
+}
+
+/* Footer links */
+.footer-center a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 99px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(253, 253, 253, 0);
+    font-size: medium;
+}
+
+/* Footer styles for "Sobre mí" page */
+.footer-sobremi {
+    background-color: #f70000;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 18px;
+    margin-top: 1000px;
+}
+
+.form-control {
+    background-color: $body-bg;
+    border-color: $input-focus-border-color;
+    color: $body-color;
+
+    &:focus {
+        border-color: lighten($input-focus-border-color, 10%);
+        box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5);
+    }
+}
+
+.footer-contact {
+    background-color: #f70000;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 18px;
+    margin-top: 600px;
+}
+
+.social-media {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+/* Página de episodios */
+#episodes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.episode {
+    display: flex;
+    gap: 1rem;
+
+    .episode-thumbnail {
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .episode-content {
+        flex-grow: 1;
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: $primary;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 /* Estilos para la imagen colapsada */
 .navbar-brand .collapsed-image {
-  display: none; /* Oculta la imagen colapsada por defecto */
+    display: none;
 }
 
 .navbar-brand img {
-  display: block; /* Asegúrate de que la imagen esté visible en pantallas grandes */
+    display: block;
 }
 
-/* Mostrar la imagen colapsada en pantallas pequeñas */
 @media (max-width: 767px) {
-  .navbar-brand img {
-    display: none; /* Muestra la imagen colapsada */
-    max-width: 50px; /* Ajusta el ancho de la imagen según tus necesidades */
-  }
-  .navbar-collapse {
-    display: none; /* Oculta el menú desplegable por defecto */
-  }
-  .navbar-brand img.active {
-    display: none; /* Oculta la imagen colapsada cuando el menú está desplegado */
-  }
-  .navbar-collapse.active {
-    display: block; /* Muestra el menú desplegable cuando se hace clic en la imagen */
-  }
-}
+    .navbar-brand img {
+        display: none;
+        max-width: 50px;
+    }
 
+    .navbar-collapse {
+      @media (min-width: $breakpoint-lg) {
+        display: flex !important;
+      }
+    }
+
+    .navbar-brand img.active {
+        display: none;
+    }
+    .navbar-collapse.active {
+        display: block;
+    }
+}
 
 .bg-dark {
-  background-color: white !important;
+    background-color: white !important;
 }
 
 .rectangular-button.bg-transparent {
@@ -617,52 +583,50 @@ margin-bottom: 20px;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease;
 }
 
-/* boton para suscribirse en la pantalla principal */
-
+/* Botón para suscribirse en la pantalla principal */
 .text-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white; /* Asegúrate de que el texto sea visible sobre el fondo */
-  text-align: center;
-  font-size: 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
 
 .text-overlay {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
 }
 
 .subscribe-link {
-  position: relative; /* Posicionamiento relativo para el enlace */
-  display: inline-block; /* Hace que el enlace sea del tamaño de la imagen */
+    position: relative;
+    display: inline-block;
 }
 
 .subscribe-text {
-  position: absolute; /* Posiciona el texto de forma absoluta */
-  top: 14%; /* Anteriormente 50%, ahora 45% para moverlo más arriba */
-  left: 50%; /* Centra el texto horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta la posición exacta del centro */
-  color: white; /* Color del texto */
-  font-size: 24px; /* Tamaño del texto */
-  z-index: 10; /* Asegura que el texto esté sobre la imagen */
-  pointer-events: none; /* Evita que el texto bloquee el clic en la imagen */
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+    pointer-events: none;
 }
 
-
 .subscribe-button {
-  max-width: 200px; /* Establece un ancho máximo para la imagen */
-  width: 100%; /* Asegura que la imagen se ajuste al contenedor */
-  border-radius: 5px; /* Bordes redondeados para la imagen */
-  transition: all 0.3s ease; /* Transición suave para todos los efectos */
-  display: block; /* Asegura que la imagen llene el enlace */
+    max-width: 200px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 .subscribe-button:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  filter: brightness(120%);
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    filter: brightness(120%);
 }

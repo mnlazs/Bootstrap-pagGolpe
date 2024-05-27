@@ -142,11 +142,11 @@ html, body {
     .navbar {
       flex-direction: column; } }
 
-navbar-nav {
+.navbar-nav {
   display: center;
   justify-content: center;
   width: auto; }
-  navbar-nav .nav-item {
+  .navbar-nav .nav-item {
     padding: 0.5rem 1rem; }
 
 .navbar-nav img {
@@ -184,16 +184,11 @@ navbar-nav {
   align-items: center;
   height: 100vh; }
 
-.navbar-toggler {
-  margin: 1rem 0; }
+@media (min-width: 301px) {
+  .navbar-toggler {
+    display: none; } }
 
-.navbar .navbar-toggler {
-  border: none; }
-
-.navbar .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-
-/*=============== Siguiente section ====================*/
+/* Section siguiente */
 .lower.container-fluid {
   background-image: url("images/Una-mujer-armenia.jpg");
   background-size: cover;
@@ -205,10 +200,9 @@ navbar-nav {
   height: 100vh; }
   @media (min-width: 301px) {
     .lower.container-fluid {
-      padding: 8rem 4rem;
-      /* Padding para pantallas más grandes */ } }
+      padding: 8rem 4rem; } }
 
-/******BOTONES**********/
+/* Botones */
 .button-container {
   display: flex;
   justify-content: center;
@@ -244,9 +238,7 @@ navbar-nav {
   margin: 10px;
   margin-top: 78px;
   background-color: transparent;
-  /* Mantenemos el fondo transparente */
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease;
-  /* Agregar transform a la transición */ }
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; }
   .rectangular-button.bg-transparent:hover {
     background-color: tint-color(#007BFF, 90%);
     color: shade-color(#007bff, 10%);
@@ -257,7 +249,7 @@ navbar-nav {
   background-color: #f74848 86, 255, 70;
   color: #ec0082; }
 
-/******STOCK criollo market**********/
+/* Stock criollo market */
 .cinta {
   width: 100%;
   overflow: hidden;
@@ -282,7 +274,7 @@ navbar-nav {
     transform: translateX(0%); }
   100% {
     transform: translateX(-100%); } }
-/****************** paralax efect **************************/
+/* Parallax effect */
 .parallax {
   height: 1500px;
   background-attachment: fixed;
@@ -297,7 +289,7 @@ navbar-nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-align: center; }
 
-/**************** Estilos para el footer***************/
+/* Footer styles */
 footer {
   background-color: #f70000;
   color: white;
@@ -321,21 +313,21 @@ footer {
 .footer-center li {
   margin-right: 20px; }
 
-/* Estilos para los enlaces */
+/* Footer links */
 .footer-center a {
   color: #ff0000;
   text-decoration: none;
-  /* Elimina el subrayado*/
   font-size: 18px;
   margin-top: 99px; }
 
-/* Estilos para el footer-bottom */
+/* Footer bottom */
 .footer-bottom {
   text-align: center;
   padding: 10px 0;
   background-color: rgba(253, 253, 253, 0);
   font-size: medium; }
 
+/* Footer styles for "Sobre mí" page */
 .footer-sobremi {
   background-color: #f70000;
   color: #ffffff;
@@ -351,13 +343,6 @@ footer {
     border-color: white;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
 
-.footer-sobremi {
-  background-color: #f70000;
-  color: #ffffff;
-  padding: 30px 0;
-  font-size: 18px;
-  margin-top: 1000px; }
-
 .footer-contact {
   background-color: #f70000;
   color: #ffffff;
@@ -367,15 +352,11 @@ footer {
 
 .social-media {
   justify-content: center;
-  /* Centra los íconos horizontalmente */
   align-items: center;
-  /* Centra los íconos verticalmente */
   margin-top: 20px;
-  /* Ajusta este valor según la distancia deseada */
-  gap: 10px;
-  /* Espacio entre cada ícono, ajusta según necesites */ }
+  gap: 10px; }
 
-/**********************Pagina de episodios*********************************/
+/* Página de episodios */
 #episodes-list {
   display: flex;
   flex-direction: column;
@@ -410,32 +391,25 @@ footer {
 
 /* Estilos para la imagen colapsada */
 .navbar-brand .collapsed-image {
-  display: none;
-  /* Oculta la imagen colapsada por defecto */ }
+  display: none; }
 
 .navbar-brand img {
-  display: block;
-  /* Asegúrate de que la imagen esté visible en pantallas grandes */ }
+  display: block; }
 
-/* Mostrar la imagen colapsada en pantallas pequeñas */
 @media (max-width: 767px) {
   .navbar-brand img {
     display: none;
-    /* Muestra la imagen colapsada */
-    max-width: 50px;
-    /* Ajusta el ancho de la imagen según tus necesidades */ }
-
+    max-width: 50px; } }
+@media (max-width: 767px) and (min-width: 301px) {
   .navbar-collapse {
-    display: none;
-    /* Oculta el menú desplegable por defecto */ }
+    display: flex !important; } }
 
+@media (max-width: 767px) {
   .navbar-brand img.active {
-    display: none;
-    /* Oculta la imagen colapsada cuando el menú está desplegado */ }
+    display: none; }
 
   .navbar-collapse.active {
-    display: block;
-    /* Muestra el menú desplegable cuando se hace clic en la imagen */ } }
+    display: block; } }
 .bg-dark {
   background-color: white !important; }
 
@@ -453,13 +427,12 @@ footer {
   background-color: transparent;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s ease; }
 
-/* boton para suscribirse en la pantalla principal */
+/* Botón para suscribirse en la pantalla principal */
 .text-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  /* Asegúrate de que el texto sea visible sobre el fondo */
   text-align: center;
   font-size: 20px; }
 
@@ -471,39 +444,24 @@ footer {
 
 .subscribe-link {
   position: relative;
-  /* Posicionamiento relativo para el enlace */
-  display: inline-block;
-  /* Hace que el enlace sea del tamaño de la imagen */ }
+  display: inline-block; }
 
 .subscribe-text {
   position: absolute;
-  /* Posiciona el texto de forma absoluta */
   top: 14%;
-  /* Anteriormente 50%, ahora 45% para moverlo más arriba */
   left: 50%;
-  /* Centra el texto horizontalmente */
   transform: translate(-50%, -50%);
-  /* Ajusta la posición exacta del centro */
   color: white;
-  /* Color del texto */
   font-size: 24px;
-  /* Tamaño del texto */
   z-index: 10;
-  /* Asegura que el texto esté sobre la imagen */
-  pointer-events: none;
-  /* Evita que el texto bloquee el clic en la imagen */ }
+  pointer-events: none; }
 
 .subscribe-button {
   max-width: 200px;
-  /* Establece un ancho máximo para la imagen */
   width: 100%;
-  /* Asegura que la imagen se ajuste al contenedor */
   border-radius: 5px;
-  /* Bordes redondeados para la imagen */
   transition: all 0.3s ease;
-  /* Transición suave para todos los efectos */
-  display: block;
-  /* Asegura que la imagen llene el enlace */ }
+  display: block; }
 
 .subscribe-button:hover {
   transform: scale(1.05);
