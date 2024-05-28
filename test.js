@@ -1,6 +1,6 @@
 async function fetchEpisodios() {
     try {
-        const response = await fetch('/ruta-para-obtener-episodios'); // Asegúrate de tener esta ruta configurada en tu servidor
+        const response = await fetch('/http://localhost:3000/send-email'); // Asegúrate de tener esta ruta configurada en tu servidor
         if (!response.ok) throw new Error('Respuesta de red no fue ok');
         
         const episodios = await response.json(); // Suponiendo que el servidor devuelve un JSON con los episodios
