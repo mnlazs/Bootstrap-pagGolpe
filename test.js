@@ -1,12 +1,4 @@
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    initParallaxEffect(); 
-});
-
-
 async function fetchEpisodios() {
-
     try {
         const response = await fetch('/ruta-para-obtener-episodios'); // Asegúrate de tener esta ruta configurada en tu servidor
         if (!response.ok) throw new Error('Respuesta de red no fue ok');
@@ -32,7 +24,7 @@ async function fetchEpisodios() {
 // Define menuLinks seleccionando todos los enlaces dentro de la navegación
 const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-  menuLinks.forEach(link => {
+menuLinks.forEach(link => {
     link.addEventListener('click', async (event) => {
         if (link.getAttribute('href').startsWith('#')) {
             event.preventDefault();
@@ -45,30 +37,29 @@ const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
     });
 });
 
+async function createToken() {
+    const url = 'https://accounts.spotify.com/api/token';
+    const body = new URLSearchParams({
+        grant_type: 'client_credentials',
+        client_id: "a36ee9830b3f478faa84976f71874258",
+        client_secret: "80d6ed48368f4c11a46d2d45be5155f6",
+    });
 
-  async function createToken() {
-      const url = 'https://accounts.spotify.com/api/token';
-      const body = new URLSearchParams({
-          grant_type: 'client_credentials',
-          client_id: "a36ee9830b3f478faa84976f71874258",
-          client_secret: "80d6ed48368f4c11a46d2d45be5155f6",
-      });
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+    });
+    const data = await response.json();
+    return data.access_token;
+}
 
-      const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: body.toString(),
-      });
-      const data = await response.json();
-      return data.access_token;
-  }
-
-  async function logEpisodios() {
+async function logEpisodios() {
     const token = await createToken();
     const response = await fetch('https://api.spotify.com/v1/shows/2XXFmPWjgpqqxxzuO8pxSI/episodes?market=US', {
-      headers: {
-          Authorization: `Bearer ${token}`
-      }
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
     });
     if (!response.ok) {
         // Si la respuesta no es exitosa, lanza un error
@@ -91,38 +82,22 @@ const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
             episodeElement.innerHTML = `
                 <div class="media">
-                  <img src="${episode.images[0].url}" class="mr-3" alt="Episode cover" style="width: 200px; height: 200px; border-radius: 20px;">
-                  <div class="media-body">
-                    <h5 class="mt-0">${episode.name}</h5>
-                    <p>${shortDescription}</p> <!-- Usa shortDescription aquí -->
-                    <audio controls>
-                      <source src="${episode.audio_preview_url}" type="audio/mpeg">
-                      Tu navegador no soporta el elemento de audio.
-                    </audio>
-                  </div>
+                    <img src="${episode.images[0].url}" class="mr-3" alt="Episode cover" style="width: 200px; height: 200px; border-radius: 20px;">
+                    <div class="media-body">
+                        <h5 class="mt-0">${episode.name}</h5>
+                        <p>${shortDescription}</p> <!-- Usa shortDescription aquí -->
+                        <audio controls>
+                            <source src="${episode.audio_preview_url}" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
                 </div>
             `;
             // Agrega el elemento del episodio al contenedor de episodios
             episodesList.appendChild(episodeElement);
         });
     }
-
 }
 
-function initParallaxEffect() {
-    const parallaxElement = document.querySelector('.section1 img');  // Asegúrate de que este selector coincida con tu elemento parallax
-    const section1 = document.querySelector('.section1');
-
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.pageYOffset;
-        const section1OffsetTop = section1.offsetTop;
-        const section1Height = section1.offsetHeight;
-
-        if (scrollPosition > section1OffsetTop && scrollPosition < section1OffsetTop + section1Height) {
-            const parallaxOffset = (scrollPosition - section1OffsetTop) * 0.5;
-            parallaxElement.style.transform = 'translateY(' + parallaxOffset + 'px)';
-        }
-    });
-}
 // Llamada a la función logEpisodios para ejecutarla
 logEpisodios();

@@ -469,4 +469,18 @@ footer {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   filter: brightness(120%); }
 
+/* Añade esto a tu archivo CSS (test.css) */
+.episode {
+  transition: transform 0.3s, box-shadow 0.3s; }
+
+.episode:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+
+.episode img {
+  transition: transform 0.3s; }
+
+.episode:hover img {
+  transform: scale(1.1); }
+
 /*# sourceMappingURL=test.css.map */
