@@ -337,11 +337,13 @@ footer {
 
 .form-control {
   background-color: #ffffff;
-  border-color: #ffffff;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
   .form-control:focus {
     border-color: white;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    background-color: #ffffff;
+    color: #000000; }
 
 .footer-contact {
   background-color: #f70000;

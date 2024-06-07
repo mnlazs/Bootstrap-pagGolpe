@@ -461,15 +461,18 @@ footer {
 }
 
 .form-control {
-    background-color: $body-bg;
+    background-color: $body-bg; // ya configurado como blanco
+    color: $body-color; 
     border-color: $input-focus-border-color;
-    color: $body-color;
 
     &:focus {
         border-color: lighten($input-focus-border-color, 10%);
-        box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5);
+        box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5); 
+        background-color: $body-bg; 
+        color: $black; 
     }
 }
+
 
 .footer-contact {
     background-color: #f70000;
