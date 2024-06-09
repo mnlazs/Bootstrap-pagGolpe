@@ -457,8 +457,29 @@ footer {
     color: #ffffff;
     padding: 30px 0;
     font-size: 18px;
-    margin-top: 1000px;
+    margin-top: 650px;
 }
+
+/* Footer styles for "index" page */
+.footer-contact{
+    background-color: #f70000;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+/* Footer styles for "contacto" page */
+.footer-contacto{
+    background-color: #f70000;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 18px;
+    margin-top: 569px;
+}
+
+
+
 
 .form-control {
     background-color: $body-bg; // ya configurado como blanco
@@ -473,14 +494,6 @@ footer {
     }
 }
 
-
-.footer-contact {
-    background-color: #f70000;
-    color: #ffffff;
-    padding: 30px 0;
-    font-size: 18px;
-    margin-top: 100px;
-}
 
 .social-media {
     justify-content: center;

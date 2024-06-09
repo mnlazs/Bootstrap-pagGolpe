@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Una descripción breve de la página">
+    <meta name="description" content="Escucha nuestro podcast sobre política donde discutimos las últimas noticias, análisis y opiniones sobre eventos políticos actuales y sus implicaciones.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,111 +13,74 @@
     <title>😵‍💫🥊</title>
 </head>
 <body class="bg-dark text-white">
-  <div id="home" class="homepage container-fluid"> 
-    <header class="container-md"> 
-      <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container">
-          <div class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                  <img class="nav-img" src="images/Home.png" alt="Inicio">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobremi.html">
-                  <img class="nav-img" src="images/podcast-removebg-preview.png" alt="Sobre mí">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="episodios.html">
-                  <img class="nav-img" src="images/home1-removebg-preview.png" alt="Episodios">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">
-                  <img class="nav-img" src="images/carayoutube-removebg.png" alt="Contacto">
-                </a>
-              </li>
-            </ul>
+  <div class="wrapper">
+    <div class="content">
+      <header class="container-md"> 
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <div class="container">
+            <div class="navbar-collapse collapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">
+                    <img class="nav-img" src="images/Home.png" alt="Inicio">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobremi.html">
+                    <img class="nav-img" src="images/podcast-removebg-preview.png" alt="Sobre mí">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="episodios.html">
+                    <img class="nav-img" src="images/home1-removebg-preview.png" alt="Episodios">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">
+                    <img class="nav-img" src="images/carayoutube-removebg.png" alt="Contacto">
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>  
-    </header>
+        </nav>  
+      </header>
 
-    <div id="seccion1" class="cinta">
+      <div id="seccion1" class="cinta">
         <ul>
             <!-- Lista de items -->
         </ul>
-    </div>
-    
-    <section class="contact-section">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="contact-form bg-transparent p-4">
-              <h2 class="text-center mb-4" style="color: black; font-size: 22px;">Escríbeme</h2>
-              <form id="contactForm">
-                <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Correo Electrónico</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico" required>
-                </div>
-                <div class="form-group">
-                  <label for="message">Mensaje</label>
-                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
-                </div>
-                <button type="submit" class="rectangular-button bg-transparent">Enviar</button>
-              </form>
+      </div>
+        
+      <section class="contact-section">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <div class="contact-form bg-transparent p-4">
+                <h2 class="text-center mb-4" style="color: black; font-size: 22px;">Escríbeme</h2>
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                  </div>
+                  <button type="submit" class="rectangular-button bg-transparent">Enviar</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="test.js"></script> 
-
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', async function (event) {
-        event.preventDefault();
-    
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-    
-        try {
-          const response = await fetch('http://localhost:3000/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-          });
-    
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-    
-          const result = await response.json();
-          if (result.success) {
-            alert('Correo enviado correctamente');
-          } else {
-            alert('Error al enviar el correo');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-          alert('Error al enviar el correo');
-        }
-      });
-    </script>
-
-    <footer class="footer-contact">
+    <footer class="footer-contacto">
       <div class="footer-content">
         <div class="footer-center">
           <img src="images/logo.png" alt="el golpe logo" width="200">
@@ -142,5 +105,44 @@
       </div>
     </footer>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="test.js"></script> 
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+  
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      try {
+        const response = await fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+  
+        const result = await response.json();
+        if (result.success) {
+          alert('Correo enviado correctamente');
+        } else {
+          alert('Error al enviar el correo');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error al enviar el correo');
+      }
+    });
+  </script>
 </body>
 </html>
