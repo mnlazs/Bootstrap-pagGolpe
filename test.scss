@@ -61,7 +61,15 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 #about {
     background-color: #ffffff;
 }
-
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #fff0f0;
+}
 .container, .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -71,16 +79,37 @@ $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3
 .contact-section {
     padding: 0;
 }
-
 .contact-form {
     background-color: $body-bg;
     margin: 0 auto;
     max-width: 100%;
     box-shadow: none;
+    color: $body-color; // Asegurando que el texto del formulario sea negro
 }
 
+.form-control {
+    color: #000000;
+    background-color: #ffe4e4; 
+
+    &:focus {
+        box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5);
+        background-color: $body-bg;
+        color: $body-color; // negro
+    }
+
+    &::placeholder {
+        color: lighten($body-color, 30%); // Placeholder en un gris claro
+    }
+}
+
+.form-control::placeholder {
+    color: gray; 
+}
+
+
+
 .navbar-nav .nav-link .nav-img {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; 
 }
 
 .navbar-nav .nav-link:hover .nav-img, 
@@ -218,6 +247,7 @@ html, body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 23px;
 
     @media (max-width: $breakpoint-lg) {
         flex-direction: column;
@@ -250,7 +280,7 @@ html, body {
     margin-top: 40px;
 
     @media (min-width: $breakpoint-sm) {
-        width: 75px;
+        width: 62px;
     }
 }
 
@@ -259,6 +289,48 @@ html, body {
     padding-left: 0;
     margin-right: auto;
     margin-left: auto;
+}
+
+/* Estilos específicos para la página de contacto */
+.contact-page .navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 23px;
+}
+
+.contact-page .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.contact-page .navbar-nav .nav-item {
+    padding: 0.5rem 1rem;
+}
+
+.contact-page .navbar-nav img {
+    height: auto;
+    margin-top: 40px;
+}
+
+@media (max-width: $breakpoint-lg) {
+    .contact-page .navbar {
+    flex-direction: column;
+    }
+
+    .contact-page .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .contact-page .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+    }
+
+    .contact-page .navbar-nav img {
+    margin-top: 0;
+    }
 }
 
 .contact-form {
@@ -476,22 +548,6 @@ footer {
     padding: 30px 0;
     font-size: 18px;
     margin-top: 569px;
-}
-
-
-
-
-.form-control {
-    background-color: $body-bg; // ya configurado como blanco
-    color: $body-color; 
-    border-color: $input-focus-border-color;
-
-    &:focus {
-        border-color: lighten($input-focus-border-color, 10%);
-        box-shadow: 0 0 8px rgba($input-focus-border-color, 0.5); 
-        background-color: $body-bg; 
-        color: $black; 
-    }
 }
 
 
