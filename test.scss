@@ -463,9 +463,14 @@ html, body {
 
 /* Parallax effect */
 .parallax {
-    height: 1500px;
+    height: 100vh;
+    background-image: url('images/reeldemo.gif');
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-overlay {
