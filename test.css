@@ -333,7 +333,7 @@ html, body {
 /* Parallax effect */
 .parallax {
   height: 100vh;
-  background-image: url("images/reeldemo.gif");
+  background-image: url("images/reeldemo2.gif");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
