@@ -38,6 +38,10 @@ $breakpoint-lg: 301px;
 $breakpoint-sm: 300px;
 $accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
 $accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
 
 // Media queries para diferentes tamaños de pantalla
 @media (max-width: 600px) {
@@ -464,25 +468,29 @@ html, body {
 /* Parallax effect */
 .parallax {
     height: 100vh;
-    background-image: url('images/reeldemo2.gif');
+    background-image: url('images/reeldemo.gif');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.text-overlay {
+    justify-content: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
 }
 
+@media (max-width: $breakpoint-md) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+@media (max-width: $breakpoint-sm) {
+    .parallax {
+        height: 50vh;  // Ajusta la altura para pantallas más pequeñas
+    }
+}
 /* Footer styles */
 footer {
     background-color: #f70000;

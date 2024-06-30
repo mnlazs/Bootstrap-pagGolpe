@@ -162,7 +162,7 @@ html, body {
   justify-content: center;
   width: 100%;
   margin-top: 23px; }
-  @media (max-width: 301px) {
+  @media (max-width: 1200px) {
     .navbar {
       flex-direction: column; } }
 
@@ -177,7 +177,7 @@ html, body {
   width: 10px;
   height: auto;
   margin-top: 107px; }
-  @media (min-width: 301px) {
+  @media (min-width: 1200px) {
     .navbar-nav img {
       width: 75px; } }
 
@@ -185,7 +185,7 @@ html, body {
   width: 68px;
   height: auto;
   margin-top: 40px; }
-  @media (min-width: 300px) {
+  @media (min-width: 768px) {
     .navbar-nav img {
       width: 62px; } }
 
@@ -214,7 +214,7 @@ html, body {
   height: auto;
   margin-top: 40px; }
 
-@media (max-width: 301px) {
+@media (max-width: 1200px) {
   .contact-page .navbar {
     flex-direction: column; }
 
@@ -240,7 +240,7 @@ html, body {
   align-items: center;
   height: 100vh; }
 
-@media (min-width: 301px) {
+@media (min-width: 1200px) {
   .navbar-toggler {
     display: none; } }
 
@@ -254,7 +254,7 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100vh; }
-  @media (min-width: 301px) {
+  @media (min-width: 1200px) {
     .lower.container-fluid {
       padding: 8rem 4rem; } }
 
@@ -333,23 +333,22 @@ html, body {
 /* Parallax effect */
 .parallax {
   height: 100vh;
-  background-image: url("images/reeldemo2.gif");
+  background-image: url("images/reeldemo.gif");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  position: relative; }
 
-.text-overlay {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 40px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  text-align: center; }
-
+@media (max-width: 992px) {
+  .parallax {
+    background-attachment: scroll; } }
+@media (max-width: 768px) {
+  .parallax {
+    height: 50vh; } }
 /* Footer styles */
 footer {
   background-color: #f70000;
@@ -462,7 +461,7 @@ footer {
   .navbar-brand img {
     display: none;
     max-width: 50px; } }
-@media (max-width: 767px) and (min-width: 301px) {
+@media (max-width: 767px) and (min-width: 1200px) {
   .navbar-collapse {
     display: flex !important; } }
 
