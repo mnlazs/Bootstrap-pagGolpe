@@ -435,13 +435,8 @@ html, body {
 
 /* Stock criollo market */
 .cinta {
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
     z-index: 1000;
-    background-color: #f79090;
-}
+  }  
 
 .cinta ul {
     display: flex;
@@ -619,6 +614,10 @@ footer {
         }
     }
 }
+nav.navbar {
+    z-index: 1001;
+  }
+
 
 /* Estilos para la imagen colapsada */
 .navbar-brand .collapsed-image {
@@ -650,8 +649,18 @@ footer {
 }
 
 .bg-dark {
-    background-color: rgb(187, 27, 27) !important;
-}
+    background-color: #ffffff !important;
+  } 
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #333333 !important;       // un gris oscuro legible
+    transition: color 0.2s ease;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: #000000 !important;       // negro al hover/focus
+  }
+  
 
 .rectangular-button.bg-transparent {
     padding: 10px 20px;

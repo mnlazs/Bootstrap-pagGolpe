@@ -374,12 +374,9 @@ html, body {
 
 /* Stock criollo market */
 .cinta {
-  width: 100%;
-  overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: #f79090;
 }
 
 .cinta ul {
@@ -548,6 +545,10 @@ footer {
   text-decoration: underline;
 }
 
+nav.navbar {
+  z-index: 1001;
+}
+
 /* Estilos para la imagen colapsada */
 .navbar-brand .collapsed-image {
   display: none;
@@ -577,7 +578,7 @@ footer {
   }
 }
 .bg-dark {
-  background-color: rgb(187, 27, 27) !important;
+  background-color: #343a40 !important;
 }
 
 .rectangular-button.bg-transparent {
