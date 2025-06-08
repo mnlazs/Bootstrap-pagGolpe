@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "el-golpe-8a734"
-  }
+    "elgolpe": "el-golpe-8a734"
+  },
+  "targets": {},
+  "etags": {}
 }

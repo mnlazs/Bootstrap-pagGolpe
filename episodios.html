@@ -14,34 +14,24 @@
   <title>😵‍💫🥊</title>
 </head>
 <body>
-  <div class="content-wrapper">
-  <header class="container-md"> 
-    <nav class="navbar navbar-expand-sm navbar-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="index.html">
-            <img class="nav-img" src="images/Home.png" alt="Podcast" />
-          </a>
-          <a class="nav-item nav-link" href="sobremi.html">
-            <img class="nav-img" src="images/podcast-removebg-preview.png" alt="Sobre mí"/>
-          </a>
-          <a class="nav-item nav-link" href="episodios.html">
-            <img class="nav-img" src="images/home1-removebg-preview.png" alt="Contacto" />
-          </a>
-          <a class="nav-item nav-link" href="contact.html">
-            <img class="nav-img" src="images/carayoutube-removebg.png" alt="Podcast"/>
-            <span class="sr-only">(current)</span>
-          </a>
+  <div id="home" class="homepage container-fluid"> 
+    <header class="container-md"> 
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="index.html">Inicio</a>
+            <a class="nav-item nav-link" href="sobremi.html">Sobre mí</a>
+            <a class="nav-item nav-link" href="episodios.html">Episodios</a>
+            <a class="nav-item nav-link" href="contact.html">Contacto</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>    
+    </header>
   </div>
-  </header>
-
-
+  
   <div id="seccion1" class="cinta">
       <ul>
           <li>Caracas -70%🔻 200MM</li>
@@ -98,7 +88,9 @@
   <div id="episodes-list" class="container">
     <!-- Los episodios se cargarán aquí mediante JavaScript -->
   </div>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script src="test.js"></script>
 </body>
 </html>
