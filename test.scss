@@ -110,16 +110,20 @@ $breakpoint-xs: 576px;
     color: gray; 
 }
 
+/* 1. Quita el subrayado y aplica transición */
+.navbar-dark .navbar-nav .nav-link {
+    text-decoration: none !important;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: #000;
+  }
+  
+  /* 2. Agranda al hacer hover */
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    transform: scale(1.1);
+    color: #000 !important; /* asegúrate que el color sea legible */
+  }
 
-
-.navbar-nav .nav-link .nav-img {
-    transition: transform 0.3s ease-in-out; 
-}
-
-.navbar-nav .nav-link:hover .nav-img, 
-.navbar-nav .nav-link:focus .nav-img {
-    transform: scale(1.3);
-}
 
 .selector {
     padding: $accordion-padding-y $accordion-padding-x;
@@ -268,26 +272,6 @@ html, body {
     }
 }
 
-.navbar-nav img {
-    width: 10px;
-    height: auto;
-    margin-top: 107px;
-
-    @media (min-width: $breakpoint-lg) {
-        width: 75px;
-    }
-}
-
-.navbar-nav img {
-    width: 68px;
-    height: auto;
-    margin-top: 40px;
-
-    @media (min-width: $breakpoint-sm) {
-        width: 62px;
-    }
-}
-
 .container {
     padding-right: 0;
     padding-left: 0;
@@ -318,10 +302,7 @@ html, body {
     padding: 0.5rem 1rem;
 }
 
-.contact-page .navbar-nav img {
-    height: auto;
-    margin-top: 40px;
-}
+
 
 @media (max-width: $breakpoint-lg) {
     .contact-page .navbar {
@@ -337,9 +318,6 @@ html, body {
     padding: 0.5rem 0;
     }
 
-    .contact-page .navbar-nav img {
-    margin-top: 0;
-    }
 }
 
 .contact-form {
@@ -591,11 +569,6 @@ footer {
         height: 100px;
         overflow: hidden;
 
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
     }
 
     .episode-content {
@@ -623,10 +596,6 @@ footer {
     }
 }
 
-/* Estilos para la imagen colapsada */
-.navbar-brand .collapsed-image {
-    display: none;
-}
 
 .navbar-brand img {
     display: block;
@@ -652,6 +621,21 @@ footer {
     }
 }
 
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    background-color: transparent !important;
+  }
+  
+  /* Centra  los enlaces del navbar */
+  .navbar-collapse {
+    display: flex !important;         /* asegúrate de que sea flex */
+    justify-content: center !important;
+  }
+  
+  /* Y quita ml-auto de la lista en tu HTML (p. ej. <div class="navbar-nav ml-auto">)
+     para que no empuje los items a la derecha */
+  .navbar-nav {
+    margin-left: 0 !important;
+  }
 
 .rectangular-button.bg-transparent {
     padding: 10px 20px;
@@ -717,8 +701,6 @@ footer {
 }
 
 
-/* Añade esto a tu archivo CSS (test.css) */
-
 .episode {
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -738,17 +720,18 @@ footer {
 
 /* Afecta a todos los navbars con .navbar-dark */
 .navbar-dark .navbar-nav .nav-link {
-    color: #a30e0e;               /* color base */
+    color: #000000;               /* color base */
     transition: color 0.2s ease;
   }
+
+
   .navbar-dark .navbar-nav .nav-link:hover,
   .navbar-dark .navbar-nav .nav-link:focus {
-    color: #000000 !important;    /* color al pasar el ratón */
+    color: #61cd5e !important;    /* color al pasar el ratón */
   }
   
 
 
-/* 1) Quita cualquier color de fondo en el nav */
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: transparent !important;
   }
@@ -758,7 +741,11 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: transparent !important;
   }
   
-
+  .navbar-collapse {
+    display: flex !important; 
+    justify-content: center !important;
+  }
+  
   /* 1) Haz el nav transparente */
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: transparent !important;
