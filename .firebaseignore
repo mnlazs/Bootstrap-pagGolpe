@@ -1,0 +1,15 @@
+# caches de SASS y Firebase
+.sass-cache/
+hosting.cache/
+.firebase/
+
+# sourcemaps (pesan cientos de MB)
+*.map
+
+# logs y env vars
+*.log
+firebase-debug.log
+.env
+
+# metadatos de IDE
+.vscode/

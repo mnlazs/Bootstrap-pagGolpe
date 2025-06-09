@@ -28,10 +28,10 @@
   background-color: #fff0f0;
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   padding-right: 0;
   padding-left: 0;
-  height: 210px;
 }
 
 .contact-section {
@@ -250,6 +250,11 @@ html, body {
   margin-top: 23px;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(216, 17, 17, 0.5);
+  text-decoration: none;
+}
+
 .contact-page .navbar-nav {
   display: flex;
   justify-content: center;
@@ -374,9 +379,12 @@ html, body {
 
 /* Stock criollo market */
 .cinta {
+  width: 100%;
+  overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 1000;
+  background-color: #f79090;
 }
 
 .cinta ul {
@@ -545,10 +553,6 @@ footer {
   text-decoration: underline;
 }
 
-nav.navbar {
-  z-index: 1001;
-}
-
 /* Estilos para la imagen colapsada */
 .navbar-brand .collapsed-image {
   display: none;
@@ -577,10 +581,6 @@ nav.navbar {
     display: block;
   }
 }
-.bg-dark {
-  background-color: #343a40 !important;
-}
-
 .rectangular-button.bg-transparent {
   padding: 10px 20px;
   color: #000000;
@@ -660,6 +660,41 @@ nav.navbar {
 
 .episode:hover img {
   transform: scale(1.1);
+}
+
+/* Afecta a todos los navbars con .navbar-dark */
+.navbar-dark .navbar-nav .nav-link {
+  color: #a30e0e; /* color base */
+  transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #000000 !important; /* color al pasar el ratón */
+}
+
+/* 1) Quita cualquier color de fondo en el nav */
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  background-color: transparent !important;
+}
+
+/* 2) Asegúrate de que el contenedor del nav también herede transparencia */
+nav.navbar .navbar-collapse {
+  background-color: transparent !important;
+}
+
+/* 1) Haz el nav transparente */
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  background-color: transparent !important;
+  border: none !important; /* si Bootstrap le mete algún borde */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* 2) Asegura que el contenedor padre no meta fondo */
+#home.container-fluid,
+header.container-md {
+  background-color: transparent !important;
 }
 
 /*# sourceMappingURL=test.css.map */
